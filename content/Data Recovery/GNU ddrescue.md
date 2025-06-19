@@ -109,6 +109,7 @@ sudo ddrescue -d -r-1 /dev/sdX ./drive_backup.img ./drive_backup.log
 ```
 - Infinite retries on bad blocks (use with care)
 - Watch drive temperature and noise
+
 > [!danger] Please refrain from using this command unless you are confident on usage and physical condition of device.
 
 ---
@@ -139,6 +140,7 @@ sudo mount -o loop,ro ./drive_backup.img /mnt/recovery
 - `photorec` — file carving
 - [[testdisk]] — partition and boot sector recovery
 - `autopsy` — forensic GUI
+- [[dislocker]] — FUSE for BitLocker-encrypted drives 
 
 ---
 
@@ -147,6 +149,9 @@ sudo mount -o loop,ro ./drive_backup.img /mnt/recovery
 - Always use a **log file** to resume or refine the recovery.
 - Only write the image back to disk if you're **sure it's safe**.
 - Drives with rising **SMART Reallocated Sectors** may be degrading fast — act quickly.
+
+> [!tip]
+> For BitLocker-encrypted drives, use [[dislocker]] after imaging to unlock and access files.
 
 ---
 

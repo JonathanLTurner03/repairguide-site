@@ -149,6 +149,18 @@ sudo testdisk ./windows_backup.img
 
 ---
 
+> [!tip]
+> If the drive is BitLocker-encrypted, use [[dislocker]] to unlock the partition before attempting file recovery.
+
+## 🧪 Example Recovery Workflow (BitLocker)
+
+If you have a BitLocker-encrypted image:
+1. Unlock with `dislocker` (see [[dislocker]])
+2. Mount the unlocked volume
+3. Use `testdisk` or `photorec` on the unlocked mount or image
+
+---
+
 ## 🛑 Signs You Should Stop or Re-Evaluate
 
 > [!danger]
